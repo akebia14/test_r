@@ -1,0 +1,131 @@
+:root {
+  --bg: #10111a;
+  --panel: #1b1d2a;
+  --line: #2d3148;
+  --text: #f4f6ff;
+  --muted: #b8bfd9;
+  --accent: #75a8ff;
+  --danger: #ff6e7e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1d2235, var(--bg) 65%);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+
+.app {
+  width: min(100%, 460px);
+  margin: 0 auto;
+  min-height: 100dvh;
+  padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom));
+  display: grid;
+  gap: 10px;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #22253a, var(--panel));
+  padding: 12px;
+}
+
+.header h1,
+.enemy h2,
+.log h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.subtitle,
+#enemy-desc {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.status {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.bar-wrap {
+  margin-top: 10px;
+}
+
+progress {
+  width: 100%;
+  height: 14px;
+}
+
+.bar-text {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.action {
+  border: 1px solid #55608d;
+  border-radius: 10px;
+  background: #2a3150;
+  color: var(--text);
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  touch-action: manipulation;
+}
+
+.action.primary {
+  background: #2f5ec6;
+}
+
+.action:active {
+  transform: translateY(1px);
+}
+
+.log {
+  display: grid;
+  min-height: 180px;
+}
+
+#log-list {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  max-height: 230px;
+  overflow: auto;
+}
+
+#log-list li {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: var(--muted);
+  border-left: 2px solid #4b5380;
+  padding-left: 8px;
+}
+
+#log-list li.alert {
+  color: var(--danger);
+  border-left-color: var(--danger);
+}
