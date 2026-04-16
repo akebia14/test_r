@@ -1,0 +1,26 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #edf2ff;
+  background: #141820;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.app { min-height: 100dvh; background: linear-gradient(#1c232d, #11161c); display: flex; justify-content: center; }
+.panel { width: min(430px, 100vw); padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+h1,h2,h3,p { margin: 0; }
+.sub { color: #c3cad8; font-size: 14px; }
+.stat { background: #28313f; border-radius: 10px; padding: 10px; font-weight: 600; }
+.small { color: #a8b2c9; font-size: 12px; }
+button { border: 0; border-radius: 12px; padding: 13px; background: #3f6fbf; color: white; font-weight: 700; font-size: 15px; }
+button:active { transform: scale(0.99); }
+.card { background: #202833; border: 1px solid #313d4e; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 5px; }
+.combatBox { background: #1f2a35; border-radius: 12px; padding: 8px; }
+.bar { margin-top: 6px; height: 10px; background: #0005; border-radius: 99px; overflow: hidden; }
+.bar span { display: block; height: 100%; background: linear-gradient(90deg, #55d8ff, #7eff9f); }
+.projectile { width: 14px; height: 14px; border-radius: 50%; background: #99deff; box-shadow: 0 0 12px #99deff; align-self: center; animation: pulse .7s infinite alternate; }
+.float { position: relative; animation: rise .5s forwards; font-weight: 800; }
+.float.enemy { color: #ffb4b4; }
+.float.player { color: #8fd0ff; }
+.float.crit { font-size: 22px; color: #ffe08a; }
+@keyframes rise { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(-18px); } }
+@keyframes pulse { from { transform: scale(.8); } to { transform: scale(1.2); } }
