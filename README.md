@@ -15,6 +15,20 @@ npm run dev
 npm run build
 ```
 
+
+## GitHub Pagesでの確認
+
+GitHub Pages (Project Pages) で開けるように、`vite.config.ts` の `base` を相対パス (`./`) に設定しています。
+
+- 例: `https://<user>.github.io/<repo>/`
+- ローカル開発でも `npm run dev` で通常通り起動できます
+
+デプロイ用成果物は次で生成できます。
+
+```bash
+npm run build
+```
+
 ## プロジェクト構成
 
 - `src/data/`: ゲームデータ定義（ルーン・遺物・呪い祝福・敵・マップ生成）
