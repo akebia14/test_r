@@ -64,3 +64,14 @@ npm run build
 - CSSを縦画面（`min(430px, 100vw)`）ベースで設計。
 - タップしやすい大きめボタンを優先。
 - 1プレイ通し（開始→分岐→戦闘→報酬→ボス→結果→再挑戦）で成立する構成。
+
+
+### GitHub Actions で自動デプロイ（推奨）
+
+このリポジトリには `.github/workflows/deploy-pages.yml` を用意してあります。
+
+1. GitHub の `Settings > Pages` で **Build and deployment** の **Source** を `GitHub Actions` に変更
+2. `main` ブランチへ push
+3. Actions の `Deploy to GitHub Pages` が成功したら公開URLを開く
+
+`base: "./"` と `dist` 配信の組み合わせにより、Project Pagesでもアセット参照が崩れにくくなります。
