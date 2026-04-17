@@ -3,47 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Rune Ruins - Static</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Rune Ruins</title>
   </head>
   <body>
-    <main class="app">
-      <header class="panel header">
-        <h1>Rune Ruins</h1>
-        <p class="subtitle">縦持ちスマホ向け・静的ファイル版</p>
-      </header>
-
-      <section class="panel status" aria-live="polite">
-        <div class="row"><span>階層</span><strong id="floor">1</strong></div>
-        <div class="row"><span>HP</span><strong id="hp">30 / 30</strong></div>
-        <div class="row"><span>攻撃</span><strong id="atk">6</strong></div>
-        <div class="row"><span>防御</span><strong id="def">2</strong></div>
-        <div class="row"><span>ゴールド</span><strong id="gold">0</strong></div>
-      </section>
-
-      <section class="panel enemy" aria-live="polite">
-        <h2 id="enemy-name">敵が現れた！</h2>
-        <p id="enemy-desc"></p>
-        <div class="bar-wrap">
-          <label for="enemy-hp">敵HP</label>
-          <progress id="enemy-hp" value="1" max="1"></progress>
-          <div id="enemy-hp-text" class="bar-text">1 / 1</div>
-        </div>
-      </section>
-
-      <section class="panel actions">
-        <button id="attack-btn" class="action primary" type="button">⚔️ 攻撃</button>
-        <button id="skill-btn" class="action" type="button">✨ スキル (3G)</button>
-        <button id="heal-btn" class="action" type="button">🧪 回復 (5G)</button>
-      </section>
-
-      <section class="panel log">
-        <h2>ログ</h2>
-        <ul id="log-list"></ul>
-      </section>
-    </main>
-
-    <script src="./data.js"></script>
-    <script src="./script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
