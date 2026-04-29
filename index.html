@@ -3,10 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Rune Ruins</title>
+    <title>Rune Ruins - Browser Edition</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <main class="app">
+      <header class="panel header">
+        <h1>Rune Ruins</h1>
+        <p class="subtitle">ブラウザだけで遊べるシンプル版</p>
+      </header>
+
+      <section class="panel status" aria-label="プレイヤー状態">
+        <div class="row"><span>階層</span><strong id="floor">1</strong></div>
+        <div class="row"><span>HP</span><strong id="hp">0 / 0</strong></div>
+        <div class="row"><span>攻撃</span><strong id="atk">0</strong></div>
+        <div class="row"><span>防御</span><strong id="def">0</strong></div>
+        <div class="row"><span>ゴールド</span><strong id="gold">0</strong></div>
+      </section>
+
+      <section class="panel enemy" aria-label="敵情報">
+        <h2 id="enemy-name">-</h2>
+        <p id="enemy-desc">-</p>
+        <div class="bar-wrap">
+          <progress id="enemy-hp" value="0" max="1"></progress>
+          <div id="enemy-hp-text" class="bar-text">0 / 0</div>
+        </div>
+      </section>
+
+      <section class="panel actions" aria-label="行動">
+        <button id="attack-btn" class="action primary" type="button">攻撃</button>
+        <button id="skill-btn" class="action" type="button">スキル（3G）</button>
+        <button id="heal-btn" class="action" type="button">回復（5G）</button>
+      </section>
+
+      <section class="panel log" aria-label="ログ">
+        <h2>ログ</h2>
+        <ul id="log-list"></ul>
+      </section>
+    </main>
+
+    <script src="./data.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
